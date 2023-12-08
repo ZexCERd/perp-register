@@ -112,6 +112,7 @@ function process_csv_upload() {
                     );
                     $post_id = wp_insert_post($post_args);
                     // Update meta data
+                    update_field( 'field_prs_id' , $row[0], $post_id );
                     update_field( 'field_prs_lifestats' , $row[2], $post_id );
                     update_field( 'field_prs_sort' , $row[3], $post_id );
                 }
